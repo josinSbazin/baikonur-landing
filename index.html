@@ -3,9 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Baikonur – ваш центр управления мобильными приложениями">
   <title>Baikonur</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Baikonur</h1>
+<!-- Hero Section -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Baikonur</h1>
+        <h2>Platform</h2>
+        <p class="hero-description">Ваш центр управления мобильными приложениями</p>
+        <a href="#signup" class="cta-button">Запросить ранний доступ</a>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <img src="assets/cicd.svg" alt="CI/CD">
+          <h3>Интеграция с CI/CD</h3>
+          <p>Подключите ваши GitHub, GitLab или Bitbucket для автоматического развертывания.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/testing.svg" alt="Testing">
+          <h3>Автоматизация тестирования</h3>
+          <p>Удобный процесс тестирования приложений без хаоса в мессенджерах.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/analytics.svg" alt="Analytics">
+          <h3>Аналитика мобильных приложений</h3>
+          <p>Получайте данные о пользователях, сборках и процессе тестирования.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Signup Section -->
+<section id="signup" class="signup">
+  <div class="container">
+    <h2>Присоединяйтесь к ранним пользователям!</h2>
+    <p>Оставьте email, чтобы получить доступ к платформе одним из первых.</p>
+    <form action="#" method="POST">
+      <input type="email" name="email" placeholder="Введите ваш email" required>
+      <button type="submit">Запросить доступ</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Baikonur. Все права защищены.</p>
+    <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+  </div>
+</footer>
 </body>
 </html>

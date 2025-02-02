@@ -1,0 +1,179 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #dce0e6; /* Общий фон */
+    color: black;
+}
+
+/* Контейнер для адаптивности */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-description {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Кнопка */
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 35px;
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(135deg, #262845, #404269);
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #1e1f38, #33344d);
+    transform: scale(1.05);
+}
+
+/* Features Section */
+.features-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.feature {
+    flex: 1;
+    max-width: 320px;
+    background: linear-gradient(135deg, #dce0e6, #f0f2f5);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* Signup Section */
+.signup {
+    background: linear-gradient(135deg, #262845, #33344d);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 600px;
+    margin: 60px auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup input[type="email"] {
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 12px;
+    outline: none;
+}
+
+.signup button {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(135deg, #f26f5b, #ff8a75);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.signup button:hover {
+    background: linear-gradient(135deg, #d85e4f, #e87c68);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #262845;
+    color: #CCCCCC;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: #f26f5b;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup {
+        width: 90%;
+    }
+
+    .signup form {
+        flex-direction: column;
+    }
+}
