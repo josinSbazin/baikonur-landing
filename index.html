@@ -6,6 +6,7 @@
   <meta name="description" content="Baikonur – ваш центр управления мобильными приложениями">
   <title>Baikonur</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- Hero Section -->
@@ -13,10 +14,12 @@
   <div class="container">
     <div class="hero-content">
       <div class="hero-text">
-        <h1>Baikonur</h1>
-        <h2>Platform</h2>
+        <div class="title-group">
+          <h1>Baikonur</h1>
+          <h2>Mobile Platform</h2>
+        </div>
         <p class="hero-description">Ваш центр управления мобильными приложениями</p>
-        <a href="#signup" class="cta-button">Запросить ранний доступ</a>
+        <button class="cta-button" onclick="scrollToSignup()">Запросить доступ</button>
       </div>
       <div class="features-grid">
         <div class="feature">
@@ -58,5 +61,12 @@
     <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
   </div>
 </footer>
+
+<script>
+  function scrollToSignup() {
+    document.getElementById("signup").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
 </body>
 </html>
