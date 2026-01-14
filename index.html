@@ -1,72 +1,245 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Baikonur – ваш центр управления мобильными приложениями">
-  <title>Baikonur</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Uply — Дистрибуция мобильных билдов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body { margin: 0; font-family: Inter, Arial, sans-serif; color: #0f172a; background: #fff; line-height: 1.6; }
+    section { padding: 96px 24px; max-width: 1200px; margin: 0 auto; }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { font-size: 56px; }
+    h2 { font-size: 40px; margin-bottom: 24px; }
+    h3 { font-size: 20px; margin-bottom: 8px; }
+    p { max-width: 760px; }
+    .muted { color: #64748b; }
+
+    .btn { display: inline-block; padding: 14px 24px; border-radius: 10px; background: #6366f1; color: #fff; text-decoration: none; font-weight: 600; }
+    .btn.secondary { background: #e5e7eb; color: #111827; margin-left: 12px; }
+
+    .grid { display: grid; gap: 24px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+    .card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; background: #fff; }
+
+    .placeholder {
+      background: #f1f5f9;
+      border: 2px dashed #cbd5f5;
+      border-radius: 16px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #475569;
+      font-weight: 600;
+      text-align: center;
+      padding: 16px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    footer { padding: 64px 24px; background: #020617; color: #cbd5f5; text-align: center; }
+    ul { padding-left: 18px; }
+  </style>
 </head>
 <body>
-<!-- Hero Section -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <div class="title-group">
-          <h1>Baikonur</h1>
-          <h2>Mobile Platform</h2>
-        </div>
-        <p class="hero-description">Ваш центр управления мобильными приложениями</p>
-        <button class="cta-button" onclick="scrollToSignup()">Запросить доступ</button>
-      </div>
-      <div class="features-grid">
-        <div class="feature">
-          <img src="assets/cicd.svg" alt="CI/CD">
-          <h3>Интеграция с CI/CD</h3>
-          <p>Подключите ваши GitHub, GitLab или Bitbucket для автоматического развертывания.</p>
-        </div>
-        <div class="feature">
-          <img src="assets/testing.svg" alt="Testing">
-          <h3>Автоматизация тестирования</h3>
-          <p>Удобный процесс тестирования приложений без хаоса в мессенджерах.</p>
-        </div>
-        <div class="feature">
-          <img src="assets/analytics.svg" alt="Analytics">
-          <h3>Аналитика мобильных приложений</h3>
-          <p>Получайте данные о пользователях, сборках и процессе тестирования.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
 
-<!-- Signup Section -->
-<section id="signup" class="signup">
-  <div class="container">
-    <h2>Присоединяйтесь к ранним пользователям!</h2>
-    <p>Оставьте email, чтобы получить доступ к платформе одним из первых.</p>
-    <form action="#" method="POST">
-      <input type="email" name="email" placeholder="Введите ваш email" required>
-      <button type="submit">Запросить доступ</button>
-    </form>
+<!-- HERO -->
+<section>
+  <span class="pill">App Distribution для команд</span>
+  <h1>Дистрибуция мобильных билдов<br>быстро, безопасно и управляемо</h1>
+  <p class="muted">
+    Uply помогает доставлять iOS и Android билды тестировщикам за минуты:
+    проекты и роли, CLI для CI/CD, защищённые ссылки и контроль жизненного цикла релиза.
+  </p>
+
+  <div style="margin-top: 32px;">
+    <a class="btn" href="#">Начать бесплатно</a>
+    <a class="btn secondary" href="#">Смотреть демо</a>
+  </div>
+
+  <div style="margin-top: 64px;">
+    <div class="placeholder">
+      МЕСТО ПОД HERO (лучше всего):<br>
+      Скрин “Проект → Приложение → Список билдов” или короткое видео 10–15 сек (loop)
+    </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Baikonur. Все права защищены.</p>
-    <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+<!-- PROBLEM -->
+<section>
+  <h2>Хватит терять билды и доступы</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Хаос версий</h3>
+      <p class="muted">Непонятно, какой билд актуальный и где его искать.</p>
+    </div>
+    <div class="card">
+      <h3>Риски доступа</h3>
+      <p class="muted">Ссылки живут в чатах и не контролируются по ролям.</p>
+    </div>
+    <div class="card">
+      <h3>Слишком “платформенно”</h3>
+      <p class="muted">В экосистемных решениях дистрибуция часто — вторичная функция.</p>
+    </div>
   </div>
-</footer>
+</section>
 
-<script>
-  function scrollToSignup() {
-    document.getElementById("signup").scrollIntoView({ behavior: "smooth" });
-  }
-</script>
+<!-- HOW IT WORKS -->
+<section>
+  <h2>Как это работает</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>1. Проект и приложение</h3>
+      <p class="muted">Структура: проект → приложения → билды.</p>
+    </div>
+    <div class="card">
+      <h3>2. Загрузка через CLI или консоль</h3>
+      <p class="muted">Безопасная загрузка: временные ссылки и приватное хранилище.</p>
+    </div>
+    <div class="card">
+      <h3>3. Верификация и дистрибуция</h3>
+      <p class="muted">Билд доступен только после проверки. Затем — ссылка или скачивание.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 48px;" class="placeholder">
+    МЕСТО ПОД “HOW IT WORKS”:<br>
+    3–4 скрина по шагам или короткое видео “Upload → Verify → Copy Link”
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <h2>Ключевые возможности</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>Signed upload / download links</h3>
+      <p class="muted">Временные ссылки на операции с приватным хранилищем.</p>
+    </div>
+    <div class="card">
+      <h3>Lifecycle билда</h3>
+      <p class="muted">uploaded → verified → distributed, без “битых” релизов.</p>
+    </div>
+    <div class="card">
+      <h3>Роли и права</h3>
+      <p class="muted">Управление участниками и полномочиями внутри проекта.</p>
+    </div>
+    <div class="card">
+      <h3>CLI для CI/CD</h3>
+      <p class="muted">Загрузка релиза, release notes и раздача — из пайплайна.</p>
+    </div>
+    <div class="card">
+      <h3>iOS-онбординг устройств</h3>
+      <p class="muted">Mobileconfig + регистрация девайса (UDID flow).</p>
+    </div>
+    <div class="card">
+      <h3>Swagger API</h3>
+      <p class="muted">Документация и тестирование интеграций в браузере.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY UPLY -->
+<section>
+  <h2>Почему команды выбирают Uply</h2>
+  <p class="muted" style="max-width: 860px;">
+    Uply — не “побочная функция экосистемы”, а самостоятельный сервис, который делает одну задачу идеально:
+    доставку билдов. Мы строим процесс вокруг контроля, безопасности и удобства команды.
+  </p>
+
+  <div class="grid grid-2" style="margin-top: 24px;">
+    <div class="card">
+      <h3>Uply — специализированный сервис</h3>
+      <ul class="muted">
+        <li>Структура проектов и приложений для командной работы</li>
+        <li>Роли и права на уровне проекта</li>
+        <li>API-first + CLI для CI/CD</li>
+        <li>iOS-онбординг устройств без костылей</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Обычно в “платформенных решениях”</h3>
+      <ul class="muted">
+        <li>Дистрибуция — не основной сценарий и часто ограничена</li>
+        <li>Меньше контроля над билд-циклом и доступом</li>
+        <li>Привязка к экосистеме и её ограничениям</li>
+        <li>Сложнее адаптировать под свой CI и процессы</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 48px;" class="placeholder">
+    МЕСТО ПОД СКРИН “Members / Roles” или “Build list (Verified)”<br>
+    (это лучше всего подкрепляет тезисы)
+  </div>
+</section>
+
+<!-- CLI -->
+<section>
+  <h2>CLI, который встраивается в любой CI</h2>
+  <p class="muted">
+    Команда “одной кнопкой” из пайплайна: загрузить билд, добавить release notes, верифицировать и получить ссылку для тестеров.
+  </p>
+
+  <div class="card" style="font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">
+<pre style="margin:0; white-space: pre-wrap;">
+# пример сценария CI
+uply login --token $UPLY_TOKEN
+uply release create --project myproj --app ios --file build.ipa --notes "Fix login crash"
+uply release verify --project myproj --app ios --build-key <key>
+uply release link --project myproj --app ios --build-key <key> --type download
+</pre>
+  </div>
+
+  <p class="muted" style="margin-top: 16px;">
+    (Здесь можно заменить на реальные команды CLI, когда вы стабилизируете названия.)
+  </p>
+</section>
+
+<!-- SECURITY -->
+<section>
+  <h2>Безопасность по умолчанию</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <h3>TLS везде</h3>
+      <p class="muted">Трафик защищён, терминатор на edge.</p>
+    </div>
+    <div class="card">
+      <h3>Приватное хранилище</h3>
+      <p class="muted">Signed URL вместо публичных бакетов и “вечных ссылок”.</p>
+    </div>
+    <div class="card">
+      <h3>JWT для операций</h3>
+      <p class="muted">Права на уровне проекта и контроль доступа.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+  <h2>Начните доставлять билды правильно</h2>
+  <p class="muted">
+    Подключите команду, автоматизируйте выпуск релизов и держите историю билдов в одном месте.
+  </p>
+  <a class="btn" href="#">Запросить доступ</a>
+  <a class="btn secondary" href="#">Посмотреть документацию</a>
+</section>
+
+<footer>
+  © Uply — Дистрибуция билдов для команд
+</footer>
 
 </body>
 </html>
